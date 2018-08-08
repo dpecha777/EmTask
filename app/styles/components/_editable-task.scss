@@ -1,9 +1,20 @@
 .editable-task {
-    grid-row: 1 / 2;
+    grid-column: col-start 1 / col-end 6;
+    justify-self: center;
+    align-self: center;
 
     @include card-look(40rem, 40rem);
 
-    &__header-input {        
+
+    &__card-type {
+        padding: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-primary;
+        text-transform: uppercase;
+    }
+
+    &__header-input {
         border: none;
         padding: 1rem;
         margin: 1rem;
@@ -21,12 +32,16 @@
     }
 
     &__textarea {
-        padding: 1rem;
-        margin: 1rem;
-        border: none;
-        resize: none;
-        font-size: 1.4rem;
-        color: $color-grey-dark-2;
+        textarea {
+            width: 94.5%;
+            height: 100%;
+            padding: 1rem;
+            margin: 1rem;
+            border: none;
+            resize: none;
+            font-size: 1.4rem;
+            color: $color-grey-dark-2;
+        }
     }
 
     &__actions {

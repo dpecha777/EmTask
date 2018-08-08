@@ -1,7 +1,13 @@
 <form class="editable-task">
+    <div class="editable-task__card-type">New Task</div>
     {{input type="text" class="editable-task__header-input" value=title placeholder="Add Task Title..."}}
+
     {{input type="date" class="editable-task__due-date" value=date }}
-    {{textarea class="editable-task__textarea" value=description placeholder="Describe Task..."}}
+
+    <div class="editable-task__textarea">
+        {{textarea value=description placeholder="Describe Task..."}}
+    </div>
+    
     <div class="editable-task__actions">
         <button {{action 'addTask' task.id}} type="submit" class="editable-task__btn editable-task__btn--save">Save</button>
     </div>

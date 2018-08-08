@@ -1,21 +1,14 @@
-<form>
-  <div class="col-md-6">
-        <div class="form-group">
-            <label>Title</label>
-            {{ input type="text" class="form-control" value=model.title placeholder="Add Task..."}}
-        </div>
+<form class="editable-task">
+    <div class="editable-task__card-type">Edit Task</div>
+    {{input type="text" class="editable-task__header-input" value=modeltitle placeholder="Add Task Title..."}}
+
+    {{input type="date" class="editable-task__due-date" value=modeldate }}
+    
+    <div class="editable-task__textarea">
+        {{textarea value=model.description placeholder="Describe Task..."}}
     </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <label>Due date</label>
-            {{ input type="date" class="form-control" value=model.date }}
-        </div>
+    
+    <div class="editable-task__actions">
+        <button {{action 'addTask' task.id}} type="submit" class="editable-task__btn editable-task__btn--save">Save</button>
     </div>
-    <div class="col-md-12">
-        <div class="form-group">
-            <label>Description</label>
-            {{ textarea class="form-control" value=model.description placeholder="Describe Task..."}}
-        </div>
-    </div>  
-    <button {{action 'editTask' model.id}} type="submit" class="btn btn-primary">Submit</button>
 </form>

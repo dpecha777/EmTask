@@ -1,5 +1,6 @@
+{{ outlet }}
+
 <div class="tasks">
-    {{ outlet }}
     {{#each model as |task|}}
     <div class="task">
         <h4 class="task__header">{{ task.title }}</h4>
@@ -7,7 +8,7 @@
         <p class="task__textarea">{{ task.description }}</p>
         <div class="task__actions">
             <button {{action 'deleteTask' task.id}} class="task__btn task__btn--delete">Delete</button>
-            <button {{action 'editTask' task.id}} class="task__btn task__btn--edit">{{#link-to 'tasks.edit' task.id}}Delete{{/link-to}}</button>
+            <button {{action 'editTask' task.id}} class="task__btn task__btn--edit">{{#link-to 'tasks.edit' task.id}}Edit{{/link-to}}</button>
         </div>
     </div>
     {{/each}}
