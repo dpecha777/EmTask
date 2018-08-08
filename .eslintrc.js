@@ -4,8 +4,11 @@ module.exports = {
     ecmaVersion: 2017,
     sourceType: 'module'
   },
+  globals: {
+    'moment': true
+  },
   plugins: [
-    'ember'
+    'ember',
   ],
   extends: [
     'eslint:recommended',

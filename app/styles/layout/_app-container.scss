@@ -1,0 +1,15 @@
+.app-container {
+    display: grid;
+    grid-template-rows: 6rem minmax(calc(100vh - 6rem), min-content) 10rem;
+    grid-template-columns: [full-start] 5rem repeat(6,[col-start] minmax(min-content, 1fr) [col-end]) 5rem [full-end];
+    grid-column-gap: 2rem;    
+
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)),
+        url(/assets/img/notes.jpg);
+    background-size: cover;
+    background-position: center;
+}
