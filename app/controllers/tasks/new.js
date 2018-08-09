@@ -24,6 +24,8 @@ export default Controller.extend({
                 description: '',
                 date: ''
             });
+
+            this.transitionToRoute('tasks');
         }
     }
 });
