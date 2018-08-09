@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Emtasks</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{content-for "head"}}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Emtasks</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> {{content-for "head"}}
+  <base href="https://emtasks-3f066.firebaseapp.com/">
 
-    <!-- <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css"> -->
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/emtasks.css">
+  <!-- <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css"> -->
+  <link integrity="" rel="stylesheet" href="{{rootURL}}assets/emtasks.css"> {{content-for "head-footer"}}
+</head>
 
-    {{content-for "head-footer"}}
-  </head>
-  <body>
-    {{content-for "body"}}
+<body>
+  {{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/emtasks.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBMGAj7tfSHB01VKCd52HvCoAW9RTJzU6w",
+      authDomain: "emtasks-3f066.firebaseapp.com",
+      databaseURL: "https://emtasks-3f066.firebaseio.com",
+      projectId: "emtasks-3f066",
+      storageBucket: "emtasks-3f066.appspot.com",
+      messagingSenderId: "1079508899728"
+    };
+    firebase.initializeApp(config);
+  </script>
 
-    {{content-for "body-footer"}}
-  </body>
+  <script src="{{rootURL}}assets/vendor.js"></script>
+  <script src="{{rootURL}}assets/emtasks.js"></script>
+
+  <script type="text/javascript" src="https://emtasks-3f066.firebaseapp.com/runtime.a66f828dca56eeb90e02.js"></script>
+
+  <script type="text/javascript" src="https://emtasks-3f066.firebaseapp.com/polyfills.14fc14f3e029a8cfd046.js"></script>
+
+  <script type="text/javascript" src="https://emtasks-3f066.firebaseapp.com/main.2eb2046276073df361f7.js"></script> {{content-for "body-footer"}}
+</body>
+
 </html>
