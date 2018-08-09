@@ -15,10 +15,13 @@
     }
 
     &__header-input {
+        height: 4rem;
         border: none;
         padding: 1rem;
         margin: 1rem;
+        font-size: 1.4rem;
         color: $color-grey-dark-2;
+        text-transform: uppercase;
     }
 
     &__due-date {
@@ -29,12 +32,13 @@
         border-bottom: 1px solid $color-grey-light-2;
         font-size: 1.4rem;
         color: $color-grey-dark-2;
+        text-transform: uppercase;
     }
 
     &__textarea {
         textarea {
             width: 94.5%;
-            height: 100%;
+            height: 10rem;
             padding: 1rem;
             margin: 1rem;
             border: none;

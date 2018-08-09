@@ -1,8 +1,8 @@
 <form class="editable-task">
     <div class="editable-task__card-type">Edit Task</div>
-    {{input type="text" class="editable-task__header-input" value=modeltitle placeholder="Add Task Title..."}}
+    {{input type="text" class="editable-task__header-input" value=model.title placeholder="Add Task Title..."}}
 
-    {{input type="date" class="editable-task__due-date" value=modeldate }}
+    {{input type="date" class="editable-task__due-date" value=model.date }}
     
     <div class="editable-task__textarea">
         {{textarea value=model.description placeholder="Describe Task..."}}
