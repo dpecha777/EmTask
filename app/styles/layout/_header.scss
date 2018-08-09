@@ -1,0 +1,26 @@
+.header {
+    grid-row: 1 / - 1;
+    grid-column: 1 / -1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        color: $color-white;
+    }
+
+    &__btn {
+        width: 50rem;
+        height: 10rem;
+        justify-self: center;
+        align-self: start;
+        border: none;
+        background-color: $color-primary;
+        border-radius: 2rem;
+        font-size: $default-font-size;
+        color: $color-white;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
