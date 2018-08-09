@@ -8,7 +8,7 @@
 }
 
 .task {
-    @include card-look(fit-content, fit-content);
+    @include card-look(30rem, fit-content);
 
     &__header {
         margin: 1rem;
