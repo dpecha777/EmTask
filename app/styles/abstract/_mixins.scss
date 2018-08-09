@@ -13,9 +13,17 @@
 }
 
 @mixin btn {
+    min-height: 3rem;
+    min-width: 8rem;
     width: 100%;
     height: 80%;
     margin: 1rem;
     border: none;
     border-radius: 1rem;
+
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
 }
