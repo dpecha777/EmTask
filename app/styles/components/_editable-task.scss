@@ -57,17 +57,10 @@
 
     }
 
-    &__btn {
-        @include btn;
+    &__btn {       
 
         &--save {
-            background-color: $color-primary-dark;
-            color: $color-white;
-
-            &:hover {
-                background-color: $color-primary-light;
-                color: $color-white;
-            }
+            @include btn($color-primary-dark, $color-primary-light);
         }
 
     }
