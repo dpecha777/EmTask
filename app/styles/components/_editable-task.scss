@@ -14,25 +14,18 @@
         text-transform: uppercase;
     }
 
-    &__header-input {
-        height: 4rem;
-        border: none;
-        padding: 1rem;
-        margin: 1rem;
-        font-size: 1.4rem;
-        color: $color-grey-dark-2;
-        text-transform: uppercase;
+    &__header-input {        
+        @include input($color-white, $color-grey-dark-2);        
     }
 
     &__due-date {
-        height: 4rem;
-        padding: 1rem;
-        margin: 1rem;
-        border: none;
-        border-bottom: 1px solid $color-grey-light-2;
-        font-size: 1.4rem;
-        color: $color-grey-dark-2;
+        @include input($color-white, $color-grey-dark-2);
         text-transform: uppercase;
+
+        &::placeholder {
+            font-size: $default-font-size;
+        }
+
     }
 
     &__textarea {
@@ -43,8 +36,13 @@
             margin: 1rem;
             border: none;
             resize: none;
-            font-size: 1.4rem;
-            color: $color-grey-dark-2;
+
+            @include input($color-white, $color-grey-dark-2);
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
         }
     }
 
