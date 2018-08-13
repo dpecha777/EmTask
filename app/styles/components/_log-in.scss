@@ -1,4 +1,4 @@
-.sign-up {
+.log-in {
 
     padding: 3rem;
     background-color: rgba($color-grey-light-1, .5);
@@ -18,7 +18,7 @@
     }
     
     &__btn {
-        @include btn($color-tertiary-dark, $color-tertiary-light);
+        @include btn($color-primary, $color-primary-light);
         height: 5rem;
         font-size: 1.8rem;
 
