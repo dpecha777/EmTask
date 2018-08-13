@@ -15,12 +15,14 @@
     }
 
     &__header-input {        
-        @include input($color-white, $color-grey-dark-2);        
+        @include input($color-white, $color-grey-dark-2);
+        text-transform: uppercase;    
     }
 
     &__due-date {
         @include input($color-white, $color-grey-dark-2);
         text-transform: uppercase;
+        font-family: sans-serif;
 
         &::placeholder {
             font-size: $default-font-size;
@@ -36,6 +38,7 @@
             margin: 1rem;
             border: none;
             resize: none;
+            
 
             @include input($color-white, $color-grey-dark-2);
 
