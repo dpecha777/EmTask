@@ -13,6 +13,9 @@ module.exports = function (environment) {
       storageBucket: "emtasks-3f066.appspot.com",
       messagingSenderId: "1079508899728"
     },
+    torii: {
+      sessionServiceName: 'session'
+    },
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

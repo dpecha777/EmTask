@@ -42,7 +42,8 @@
     "emberfire": "^2.0.10",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
-    "qunit-dom": "^0.6.2"
+    "qunit-dom": "^0.6.2",
+    "torii": "^0.10.1"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
