@@ -1,10 +1,12 @@
 <div class="header">
-    <h1 class="header__text heading-1">Welcome to EmTask</h1>
+    
 
     {{#if session.isAuthenticated}}
+        <h1 class="header__text heading-1">Welcome {{session.loggedUser.displayName}}</h1>
         {{#link-to 'tasks' tagName="button" class="header__btn"}}Show your tasks{{/link-to}}
     {{/if}}
     {{#unless session.isAuthenticated}}
+        <h1 class="header__text heading-1">Welcome to EmTask</h1>
         {{#link-to 'login' tagName="button" class="header__btn"}}Log in to show your tasks{{/link-to}}
     {{/unless}}
 </div>

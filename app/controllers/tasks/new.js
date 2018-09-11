@@ -18,7 +18,9 @@ export default Controller.extend({
             });
 
             // Save to Database
-            newTask.save();
+            newTask.save().catch((error) => {
+                console.log(error)
+            });
 
             // Clear Form
             this.setProperties({

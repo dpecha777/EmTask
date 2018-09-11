@@ -5,6 +5,7 @@ import { set } from '@ember/object';
 export default Component.extend({
     session: service(),
     store: service(),
+    router: service(),
     firebaseApp: service(),
     beforeModel: function () {
         return this.get('session').fetch().catch(function () { });
@@ -25,12 +26,14 @@ export default Component.extend({
                     .then(userData => {
                         let user = that.get('store').createRecord('user', {
                             id: userData.uid,
+                            uid: userData.uid,
                             firstName: firstName,
                             lastName: lastName,
                             displayName: displayName
                         });
                         user.save().then(data => {
-                            console.log('User data added to database.')
+                            console.log('User data added to database.');
+                            this.get('router').transitionTo('header');
                         }).catch( error =>
                             console.error(error))
                     }).catch(function (error) {
