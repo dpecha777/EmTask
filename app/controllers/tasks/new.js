@@ -1,17 +1,20 @@
 import Controller from '@ember/controller';
+import {inject as service} from '@ember/service';
 
-export default Controller.extend({    
+export default Controller.extend({
+    session: service(),
     actions: {
         addTask: function () {
-            var title = this.get('title');
-            var description = this.get('description');
-            var date = this.get('date');
+            let title = this.get('title');
+            let description = this.get('description');
+            let date = this.get('date');
 
             // Create New Task
-            var newTask = this.store.createRecord('task', {
+            let newTask = this.store.createRecord('task', {
                 title: title,
                 description: description,
-                date: new Date(date)
+                date: new Date(date),
+                createdBy: this.get('session.loggedUser')
             });
 
             // Save to Database

@@ -22,6 +22,14 @@
         list-style: none;
     }
 
+    &__user-email {
+        font-size: 1.4rem;
+        color: $color-secondary-light;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;
+    }
+
 
     &__link:link,
     &__link:visited {

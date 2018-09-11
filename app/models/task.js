@@ -6,7 +6,8 @@ export default DS.Model.extend({
     date: DS.attr('date'),
     created: DS.attr('string', {
         defaultValue: function () {
-            return new Date();            
+            return new Date();
         }
-    })
+    }),
+    createdBy: DS.belongsTo('user')
 });

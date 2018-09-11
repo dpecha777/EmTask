@@ -1,16 +1,25 @@
 <nav class="navigation">
     <div class="navigation__left">
-        {{#link-to 'header' class="navigation__list-item navigation__name" }}EmTask{{/link-to}}
-        <ul class="navigation__list">
-            <li class="navigation__list-item">{{#link-to 'tasks' class='navigation__link'}} Tasks {{/link-to}}</li>
-            <li class="navigation__list-item">{{#link-to 'tasks.new' class='navigation__link'}} New Task{{/link-to}}</li>
-        </ul>
+        {{#link-to 'header' class="navigation__name" }}EmTask{{/link-to}}
+        {{#if session.isAuthenticated}}
+            <ul class="navigation__list">
+                <li class="navigation__list-item">{{#link-to 'tasks' class='navigation__link'}} Tasks {{/link-to}}</li>
+                <li class="navigation__list-item">{{#link-to 'tasks.new' class='navigation__link'}} New Task{{/link-to}}</li>
+            </ul>
+        {{/if}}
     </div>
     <div class="navigation__right">
+        <div class="navigation__user-email">
+            {{session.currentUser.email}}
+        </div>
         <ul class="navigation__list">
-            <li class="navigation__list-item">{{#link-to 'login' class='navigation__link'}} Login {{/link-to}}</li>
-            <li class="navigation__list-item">{{#link-to 'header' class='navigation__link'}} Sign Out {{/link-to}}</li>
-            <li class="navigation__list-item">{{#link-to 'login' class='navigation__link'}} Sign Up {{/link-to}}</li>
+            {{#if session.isAuthenticated}}
+                <li class="navigation__list-item" {{action 'signOut'}}>{{#link-to 'header' class='navigation__link'}} Sign Out {{/link-to}}</li>
+            {{/if}}
+            {{#unless session.isAuthenticated}}
+                <li class="navigation__list-item">{{#link-to 'login' class='navigation__link'}} Login {{/link-to}}</li>
+                <li class="navigation__list-item">{{#link-to 'sign-up' class='navigation__link'}} Sign Up {{/link-to}}</li>
+            {{/unless}}
         </ul>
     </div>
 </nav>

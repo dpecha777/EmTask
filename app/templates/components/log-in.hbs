@@ -2,9 +2,9 @@
     <h3 class="log-in__header">
         Login
     </h3>
-    <input type="email" placeholder="Type email address" class="log-in__input">
+    {{input type="email" placeholder="E-mail address" class="log-in__input" value=email }}
 
-    <input type="password" placeholder="Type your password" class="log-in__input">
+    {{input type="password" placeholder="Password" class="log-in__input" value=password }}
 
-    <button class="log-in__btn" type="submit">Login</button>
+    <button {{action 'logUser'}} class="log-in__btn" type="submit">Login</button>
 </form>
